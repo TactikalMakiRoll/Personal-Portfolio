@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="/images/resume.png">
+        <title>Oleksandr Hrydin Portfolio</title>
+    </head>
+    <body>
+        <div class="portfolio">
+            <div class="container">
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation__link">
+                            <a class="navigation__link-text" href="#skills">Skills</a>
+                        </li>
+                        <li class="navigation__link">
+                            <a class="navigation__link-text" href="#projects">Projects</a>
+                        </li>
+                        <li class="navigation__link navigation__link--active">
+                            <a class="navigation__link-text" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="introduction">
+                    <div class="introduction__photo">
+                        <img class="introduction__image" src="./images/photo.png" alt=""">
+                    </div>
+                    <div class="introduction__heading">
+                        <h2>Hi, I'm Oleksandr!</h2>
+                        <h1>A front-end developer</h1>
+                        <h2>based in <img class="introduction__flag" src="./images/UAflag.png" alt="Ukraine" /></h2>
+                    </div>
+                    <img class="introduction__scroll" id="scrollIcon" src="images/scroll.png" alt="scroll to view content">
+                </div>
+            </div>
+        </div>
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="skills__description">
+                    <div>
+                        <h2 class="skills__description-heading fs-48 fw-600">Skillset</h2>
+                        <p class="fs-18">In the past, I tried a lot of different technologies, varying from
+                            C++ and C# to Java and Javascript. But with these skills, I can tackle any challenge and be a valuable team member.</p>
+                    </div>
+                    <div class="skills__skill-list">
+                        <section class="skills__one-skill">
+                            <img class="skills__icon" src="./images/skillresponsive.png" alt="">
+                            <h3 class="skills__skill-heading fw-600 fs-24">Bulding responsive websites</h3>
+                            <p class="ff-didact fw-400 fs-18">I like when my applications look good on any device. Squish that website! It will work just as well or even better.</p>
+                        </section>
+                        <section class="skills__one-skill">
+                            <img class="skills__icon" src="./images/skillproblem.png" alt="">
+                            <h3 class="skills__skill-heading fw-600 fs-24">Problem Solving</h3>
+                            <p class="ff-didact fs-18 fw-400">I spend some time on Codewars when I can. 
+                                For me there’s no better feeling than having a hard challenge completed. </p>
+                        </section>
+                        <section class="skills__one-skill">
+                            <img class="skills__icon" src="./images/skillteam.png" alt="">
+                            <h3 class="skills__skill-heading fw-600 fs-24">Great team player</h3>
+                            <p class="ff-didact fs-18 fw-400">I&#39;ve worked in a big teams before, succesfully changed projects
+                                and evolved in my position. I also mentored new team members
+                                and share my knowledge where I need.</p>
+                        </section>
+                        <section class="skills__one-skill">
+                            <img class="skills__icon" src="./images/skilltest.png" alt="">
+                            <h3 class="skills__skill-heading fw-600 fs-24">Testing and debugging</h3>
+                            <p class="ff-didact fs-18 fw-400">Due to my previous job experience, 
+                                I am familiar with the testing theory including edge-cases, 
+                                test planning and 
+                                issue lifecycle.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="skills__slider" id="skillSlider">
+                <div class="skills__cell"><img src="./images/skillHTML.png" alt="HTML"></div>
+                <div class="skills__cell">
+                    <img src="./images/skillCSS.png" alt="CSS">
+                    <img src="./images/skillSASS.png" alt="SASS/SCSS">
+                </div>
+                <div class="skills__cell"><img src="./images/skillJS.png" alt="Javascript"></div>
+                <div class="skills__cell"><img src="./images/skillVue.png" alt="Vue 3"></div>
+            </div>
+        </section>
+        <section id="projects" class="container">
+            <h2 class="fs-48 fw-600" id="projectHeader">My projects</h2>
+            <div class="projects">
+                <div class="projects__project projects__project--right">
+                    <a class="cl-w td-n" href="https://makipetpaw.netlify.app/">
+                        <img class="projects__image" src="./images/projectCat.png" alt="image showcasing Cat project functionality and a link">
+                        <div class="projects__text">
+                            <h3 class="fw-600 fs-24">Cat explorer</h3>
+                            <p class="fw-400 fs-18 ff-didact mg-t-1">A website to find various cute cat pictures or GIFs. You can vote on random cats here, find out 
+                                details about each breed, check your favorites or browse the gallery. Completed using Vue and SCSS.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__project projects__project--left">
+                    <a class="cl-w td-n" href="https://tactikalmakiroll.github.io/Moonmath/">
+                        <img class="projects__image" src="./images/projectCalc.png" alt="image showcasing Calculator project functionality, also a link">
+                        <div class="projects__text">
+                            <h3 class="fw-600 fs-24">Moonmath calculator</h3>
+                            <p class="fw-400 fs-18 ff-didact mg-t-1">Ever wondered how much your favourite cryptocurrency would cost if it had a market cap of any other place in rankings? Well, here you go. Pure Javascript.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__project projects__project--right">
+                    <a class="cl-w td-n" href="" disabled>
+                        <img class="projects__image" src="./images/projectAnim.png" alt="Work in progress">
+                        <div class="projects__text">
+                            <h3 class="fw-600 fs-24">Animetflix (Work in Progress)</h3>
+                            <p class="fw-400 fs-18 ff-didact mg-t-1">Netflix, but for anime! Pretty simple, but also impressive. Completed using Vue Composition API instead of Options API.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section class="github">
+                <div class="github__text">
+                    <h2 class="fs-24 fw-600">Check out my GitHub for code samples of my projects</h2>
+                    <a href="https://github.com/TactikalMakiRoll" class="github__link td-n fw-600">Follow my profile</a>     
+                </div>
+                <img class="github__image" src="./images/github.png" alt="image of my GitHub profile">
+            </section>
+        </div>
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact__links">
+                    <h2 class="fw-600 fs-48">I'm ready to talk</h2>
+                    <p class="ff-didact fs-24">Let me know if you are interested in working with me</p>
+                    <p class="ff-didact fs-24">Or you can use my socials</p>
+                    <div>
+                        <a class="td-n" href="https://www.linkedin.com/in/makiroll/">
+                            <img class="contact__social-icon" src="./images/linkedicon.png" alt="linkedin link">
+                        </a>
+                        <a class="td-n" href="https://t.me/onekxCatcher">
+                            <img class="contact__social-icon" src="./images/telegramicon.png" alt="telegram link">
+                        </a>
+                        <a class="td-n" href="https://wa.me/380973957325">
+                            <img class="contact__social-icon" src="./images/whatsappicon.png" alt="whatsapp link">
+                        </a>
+                    </div>
+                    <a class="contact__cv fs-24" href="https://drive.google.com/file/d/1xrEBXT2lhkqktGDKOipu0mK2XaEjjmXb/view?usp=sharing">
+                        Link to my CV
+                        <img class="contact__cv-icon" src="./images/linkicon.png" alt="link to my CV">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>

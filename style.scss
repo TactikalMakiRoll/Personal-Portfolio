@@ -1,0 +1,535 @@
+$color-bg-main: rgba(77, 30, 213, 255);
+$color-bg-secondary: rgba(49, 11, 63, 1);
+$color-link:rgba(77, 30, 213, 1);
+
+body{
+    font-size: 16px;
+    background-color: rgba(24, 0, 44, 1);
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.fs-48{
+    font-size: 3em;
+}
+
+.fs-24{
+    font-size: 1.5em;
+}
+
+.fs-18{
+    font-size: 1.2em;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.ff-didact{
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.mg-t-1{
+    margin-top: 1rem;
+}
+
+.td-n{
+    text-decoration: none;
+}
+
+.cl-w{
+    color:white;
+}
+
+.container{
+    max-width: 1920px;
+    padding: 0 5rem;
+    margin: 0 auto;
+}
+
+.portfolio{
+    background: linear-gradient(to right, rgba(24, 0, 44, 1) 25%, $color-bg-secondary 25%);
+    height: 100vh;
+}
+
+.navigation{
+    display: flex;
+    justify-content: flex-end;
+    
+    &__link{
+        margin-top:2rem;
+    }
+
+    &__link-text{
+        padding: 2rem 2rem;
+        transition: all 200ms linear;
+        background: linear-gradient(to top, $color-bg-main 50%, $color-bg-secondary 50%) right;
+        background-size: 100% 200%;
+        background-position: 100% 200%;
+
+        
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        position: relative;
+    }
+
+    &__link-text:hover{
+        cursor: pointer;
+        background-position: 0% 100%;
+    }
+    
+}
+
+.introduction{
+    display: flex;
+    margin-top: 2rem;
+
+    &__photo{
+        margin-left: calc(15% - 5rem);
+        margin-top: -2rem;
+    }
+
+    &__image{
+        display: block;
+        max-height:70vh;
+        max-width:45vh;
+        width: auto;
+        height: auto;
+        animation: fadeOut 1s ease-in, slideRight 1s ease-in;
+    }
+
+    &__heading{
+        margin-left: calc(4rem + 5%);
+        align-self: center;
+
+        font-size: 3em;
+        font-weight: 800;
+        line-height: 4rem;
+
+        animation: fadeOut 1s ease-in, slideUp 1s ease-in;
+    }
+
+    &__flag{
+        height: 3rem;
+        position: relative;
+        top: 0.25rem;
+    }
+
+    &__scroll{
+        width: 4rem;
+
+        position: absolute;
+        bottom: 1rem;
+        left: calc(25% + 37.5%);
+        
+        animation-delay: 3s;
+        transition: visibility 1s linear;
+    }
+}
+
+.skills{
+
+    padding: 7.25em 0;
+
+    &__description{
+        display: flex;
+        text-align: left;
+
+    }
+
+    &__description-heading{
+        margin-bottom: 1rem;
+    }
+
+    &__skill-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5rem;
+
+        column-gap: 2rem;
+        row-gap: 4rem;
+
+        align-content: space-between;
+    }
+
+    &__skill-heading{
+        margin: 1rem 0;
+    }
+
+    &__one-skill{
+        width: calc(50% - 2rem);
+
+    }
+
+    &__slider{
+        position: relative;
+        left: -3%;
+
+        display: inline-flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        margin: 7.25rem 0;
+    }
+
+    &__cell{
+        width: 28%;
+        padding: 2.25rem 0;
+        flex-shrink: 0;
+        overflow: visible;
+        text-align: center;
+        border:2px #818080 solid;
+    }
+
+    &__cell + &__cell{
+        border-left: none;
+    }
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 2rem;
+
+    &__project{
+        width: calc(100% - 1rem);
+        object-fit: contain;
+        background-color: $color-bg-secondary;
+        position: relative;
+    }
+
+    &__project--right{
+        grid-column: 2;
+    }
+
+    &__project--left{
+        grid-row: 1 / span 1;
+        grid-column: 1;
+        top: 50%;
+    }
+
+    &__project--right{
+        grid-column: 2;
+    }
+
+    &__image{
+        max-width: 100%;
+        position: relative;
+    }
+
+    &__project:hover::after{
+        content: '→';
+        display: inline-block;
+        width:2.5rem;
+        height:2.5rem;
+        position: absolute;
+        right:0;
+        bottom:0;
+        color:white;
+        text-align: center;
+        line-height: 2.5rem;
+        background-color: $color-link;
+        cursor: pointer;
+    }
+
+    &__project:last-child{
+        margin-bottom:7rem;
+    }
+    
+    &__text{
+        padding: 1.875rem 1.75rem;
+    }
+}
+
+.github{
+    display: flex;
+    align-items: center;
+    gap:5rem;
+    padding: 2.25rem 4.25rem;
+
+    border-radius: 20px;
+
+    &__image{
+        max-width: 65%;
+        height: auto;
+        flex:1;
+    }
+
+    &__text{
+        width: 35%;
+    }
+
+    &__link{
+        display: block;
+        margin-top: 1rem;
+        padding: 1rem 0;
+
+        background-color: $color-link;
+        text-align: center;
+
+        color:white;
+    }
+}
+
+.contact{
+    &__links{
+        margin:7rem 0;
+        text-align: center;
+    }
+
+    &__links * + *{
+        margin-top:1.5rem;
+    }
+
+    &__social-icon{
+        width: 2.5rem;
+    }
+
+    &__social-icon{
+        margin-left:0.5rem;
+    }
+
+    &__cv{
+        display: block;
+        color: white;
+    }
+
+    &__cv-icon{
+        width: 2rem;
+        margin-left: 1rem;
+        vertical-align: bottom;
+    }
+}
+
+.slideFadeOut{
+    animation: fadeOut 1s ease-in forwards, slideUp 1s ease-in;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 0;
+        visibility: visible;
+    }
+    100%{
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        transform:translateX(-100px);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        transform:translateY(100px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(-3px)}
+    2% { transform: translateX(3px)}
+    4% { transform: translateX(-3px)}
+    6% { transform: translateX(3px)}
+    8% { transform: translateX(-3px)}
+    10% { transform: translateX(3px)}
+    12% { transform: translateX(-3px)}
+    100% { transform: translateX(-3px)}
+}
+
+@keyframes card{
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+
+    50%{
+        background: url(./images/photo.jpg);
+
+    }
+
+    100%{
+        transform: rotate3d(0,1,0,180deg);
+    }
+}
+
+@media screen and (max-width:140em){
+    body{
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width:62.5em){
+    body{
+        font-size: 14px;
+
+    }
+
+    .introduction{
+        &__photo{
+            margin-top: 2rem;
+            max-width: 50vw;
+        }
+
+        &__heading{
+            line-height: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width:48em){
+    body{
+        font-size: 12px;
+    }
+
+    .container{
+        padding: 0 2rem;
+    }
+
+    .navigation{
+        justify-content: center;
+    }
+
+    .portfolio{
+        height: inherit;
+        background: #310b3f;
+        padding-bottom: 1rem;
+    }
+
+    .introduction{
+        flex-direction: column;
+        margin-top:2.5rem;
+
+        &__photo{
+            margin: 0 auto;
+        }
+
+        &__image{
+            max-width: 40vh;
+            margin-bottom: 1rem;
+        }
+
+        &__heading{
+            margin-left:0;
+            text-align: center;
+        }
+
+        &__scroll{
+            display: none;
+        }
+    }
+
+
+    .skills{
+        padding:2rem 0;
+    }
+
+    .skills__description{
+        align-items: center;
+    }
+
+    .skills__skill-list {
+        justify-content: center;
+        margin-left:2rem;
+    }
+
+    .skills__slider{
+        display: none;
+    }
+
+    .projects__project:last-child{
+        margin-bottom:2rem;
+    }
+
+    .github{
+        flex-direction: column-reverse;
+        gap: 1rem;
+        padding: 1rem 0;
+
+        text-align: center;
+
+        &__image{
+            max-width: 100%;
+        }
+
+        &__text{
+            max-width: 100%;
+            width: inherit;
+        }
+    }
+
+    .contact__links{
+        margin-top:2rem;
+    }
+}
+
+@media screen and (max-width:32em){
+
+    .skills{
+        &__description{
+            flex-direction: column;
+        }
+
+        &__skill-list{
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    .projects{
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+
+        &__project--left{
+            grid-column: auto;
+            top:0;
+        }
+        &__project--right{
+            grid-column: auto;
+
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width:28em){
+    .introduction__photo{
+        max-width: 80%;
+        margin: 0;
+    }
+
+    .skills__skill-list{
+        row-gap: 2rem;
+    }
+
+    .github{
+        padding: 1rem 0;
+    }
+}
